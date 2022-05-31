@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "f5bd4078-65b4-426e-bce4-4a640b968c5a",
+		"name": "Express-week7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19965294"
+	},
+	"item": [
+		{
+			"name": "log_in",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTYxNmQ4ZTExODQxOWM3ODYxODM4ZCIsIm5hbWUiOiJDaGFuZ1dlbkNoaSIsImlhdCI6MTY1NDAwMzQ4OSwiZXhwIjoxNjU0NjA4Mjg5fQ.3_qIkvi5wkF5lCPf3k8vuGvSa3S2IefPmOPAVKgqvtQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"geograp@mail.com\",\n    \"password\":\"123456789\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3005/users/sign_in",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3005",
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY3ZTAzZjk1NTI4MzgyM2Y3MDBhMiIsIm5hbWUiOiJKdW4iLCJpYXQiOjE2NTM1NzExMDAsImV4cCI6MTY1NDE3NTkwMH0.4dg5GMmFynh8VN9lfvbfNXPsX7x836LGPrure-LFDxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/Jimmy/Desktop/工作四小時.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3005/upload",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3005",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"geograp@mail.com\",\n    \"password\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rocky-tor-86614.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"rocky-tor-86614",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTYxNmQ4ZTExODQxOWM3ODYxODM4ZCIsImlhdCI6MTY1NDAwNzIzNCwiZXhwIjoxNjU0NjEyMDM0fQ.YrS2Tx3zpZUCyaRllmcr1MMxNUj8yU9KXzlp_F63G9I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/Jimmy/Desktop/工作四小時.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://rocky-tor-86614.herokuapp.com/upload",
+					"protocol": "https",
+					"host": [
+						"rocky-tor-86614",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
