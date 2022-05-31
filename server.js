@@ -100,5 +100,5 @@ process.on("unhandledRejection",(err,promise) => {
 })
 
 
-app.listen(process.env.SERVERPORT);
-//app.listen(process.env.PORT || process.env.SERVERPORT);
+//app.listen(process.env.SERVERPORT);
+app.listen(process.env.PORT || process.env.SERVERPORT);
